@@ -52,28 +52,48 @@ Print the appropriate English representation,`even`, or `odd`, based on the cond
 **Language:** C  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-15T06:15:04.930Z  
+**Submitted:** 2026-10-16T05:32:14.756Z  
 
 ```c
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
 
-int main() {
+
+
+int main() 
+{
     int a, b;
-    scanf("%d%d", &a, &b);
-
-    const char *names[] = {"zero", "one", "two", "three", "four",
-                           "five", "six", "seven", "eight", "nine"};
-
-    for (int n = a; n <= b; n++) {
-        if (n <= 9)
-            printf("%s\n", names[n]);
-        else if (n % 2 == 0)
-            printf("even\n");
-        else
-            printf("odd\n");
-    }
-
-    return 0;
+    scanf("%d\n%d", &a, &b);
+    for(int i=a ; i<=b;i++){
+        if(i>=1 && i<=9){
+                if(i==1)
+                    printf("one\n");
+                else if (i==2)
+                    printf("two\n");
+                else if (i==3)
+                    printf("three\n");
+                else if (i==4)
+                    printf("four\n");
+                else if (i==5)
+                    printf("five\n");
+                else if (i==6) 
+                    printf("six\n");
+                else if (i==7)
+                    printf("seven\n");
+                else if (i==8)
+                    printf("eight\n");
+                else
+                    printf("nine\n");
+        }
+        else{
+                if(i%2==0)
+                    printf("even\n");
+                else
+                    printf("odd\n");
+            }    
+        }
 }
 
 ```
